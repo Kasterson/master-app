@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master - Acesso Rápido</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f9f9f9;
+      padding: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    .button {
+      display: block;
+      width: 80%;
+      max-width: 300px;
+      margin: 20px auto;
+      padding: 15px;
+      font-size: 18px;
+      background-color: #0088cc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .button:hover {
+      background-color: #005f8a;
+    }
+  </style>
+</head>
+<body>
+  <h1>Master - Acesso Rápido</h1>
+
+  <a href="https://wa.me/5548998565346" class="button" target="_blank">Abrir WhatsApp</a>
+
+  <a href="intent://settings#wifi" class="button">Abrir Wi-Fi</a>
+
+  <button class="button" onclick="copiarPix()">Copiar Pix</button>
+
+  <script>
+    function copiarPix() {
+      const chavePix = "026.805.249-26";
+      navigator.clipboard.writeText(chavePix).then(function() {
+        alert("Chave Pix copiada: " + chavePix);
+      }, function(err) {
+        alert("Erro ao copiar Pix");
+      });
+    }
+  </script>
+</body>
+</html>
